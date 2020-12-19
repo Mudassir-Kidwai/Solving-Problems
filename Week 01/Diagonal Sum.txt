@@ -1,0 +1,14 @@
+public static int diagonalDifference(List<List<int>> arr)
+    {
+        int diagonal1Sum = 0;
+        int diagonal2Sum = 0;
+        int j = 0;
+
+        for (int i = 0; i < arr.Count; i++)
+        {
+            diagonal1Sum += arr[i][j];
+            diagonal2Sum += arr[i][arr[i].Count - 1 - j];
+            j++;
+        }
+        return Math.Abs(diagonal1Sum - diagonal2Sum);
+    }

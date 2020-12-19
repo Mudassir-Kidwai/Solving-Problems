@@ -1,0 +1,33 @@
+//Take the both lists
+If a > b (a gets the point)
+If a < b (b gets the point)
+if a=b (no points)
+
+function tripletsCompare(a, b) {
+    let points = [0, 0];
+
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > b[i]) {
+	    // a gets the point
+            points[0]++;
+        } else if (a[i] != b[i]) {
+	    // b gets the point
+            points[1]++;
+        }
+    }
+    return points;
+}
+
+// c#
+ static List<int> compareTriplets(List<int> a, List<int> b) {
+        int[] result = {0,0};
+        for(int i=0; i<a.Count ; i++){
+            if (a[i] > b[i]){
+                result[0]++;
+            }
+            else if (a[i] < b[i]){
+                result[1]++;
+            }
+        }
+        return result.ToList();
+    }
