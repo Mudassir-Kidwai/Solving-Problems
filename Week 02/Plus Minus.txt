@@ -1,0 +1,11 @@
+ static void plusMinus(int[] arr) {
+        int pos = 0, neg = 0, zero = 0;
+        for(int i = 0; i< arr.Length ; i++){
+                if(arr[i] > 0) pos ++;
+                else if(arr[i] < 0) neg ++;
+                else zero++;
+        }
+     Console.WriteLine( string.Format("{0:0.000000}", (decimal)pos / arr.Length));
+     Console.WriteLine(string.Format("{0:0.000000}", (decimal)neg / arr.Length));
+     Console.WriteLine(string.Format("{0:0.000000}", (decimal)zero/ arr.Length));
+} 
