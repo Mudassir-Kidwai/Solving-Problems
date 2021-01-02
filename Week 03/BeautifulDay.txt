@@ -1,0 +1,6 @@
+def beautifulDays(i, j, k):
+    daycount = int(0)
+    for x in range(i, j+1):
+        if (x - int(str(x)[::-1])) % k == 0:
+            daycount += 1
+    return daycount

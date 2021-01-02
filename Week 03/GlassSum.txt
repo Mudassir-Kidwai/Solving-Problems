@@ -1,0 +1,22 @@
+    // Complete the hourglassSum function below.
+    static int hourglassSum(int[][] arr) {
+        //Matrix should be 3x3
+
+        int maxX = 3; // + (arr[0].length % 3)
+        int maxY = 3; // + (arr.length % 3)
+        int total = -64;  // because of sum cant be lesser than this 7*9 =63
+
+    for (int y = 0; y <= maxY; y++) {
+        for (int x = 0; x <= maxX; x++) {
+            // sum the top, middle and bottom of hourglass
+            int sum = arr[y][x] + arr[y][x+1] + arr[y][x+2] + 
+            arr[y+1][x+1] + 
+            arr[y+2][x] + arr[y+2][x+1] + arr[y+2][x+2];
+            
+            // don't store result to keep space complexity down
+            if(total < sum){total = sum;}
+        }
+    }    
+    return total;
+    }
+

@@ -1,0 +1,4 @@
+# Complete the saveThePrisoner function below.
+def saveThePrisoner(prisoners, sweets, seats):
+    return (sweets-1+seats)%prisoners or prisoners
+
